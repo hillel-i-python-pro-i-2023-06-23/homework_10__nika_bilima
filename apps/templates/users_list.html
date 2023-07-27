@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Data List</title>
+    <title>Users list</title>
 </head>
 <body>
     <h1>User Data List</h1>
@@ -15,5 +15,6 @@
             <br>
         {% endfor %}
     </ul>
+    <a href="{% url 'base:generate_users' %}">Generate users (10)</a>
 </body>
 </html>

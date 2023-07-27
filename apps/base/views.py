@@ -6,6 +6,11 @@ from django.views import View
 from apps.models.user_data import UserData
 
 
+class HomePageView(View):
+    def get(self, request):
+        return render(request, "home.html")
+
+
 class UserGeneratorView(View):
     def generate_unique_string(self, length):
         characters = string.ascii_letters + string.digits
