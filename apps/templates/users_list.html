@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data List</title>
+</head>
+<body>
+    <h1>User Data List</h1>
+    <ul>
+        {% for user in users_data %}
+            <li>
+                <strong>Login:</strong> {{ user.login }}<br>
+                <strong>Email:</strong> {{ user.email }}<br>
+                <strong>Password:</strong> {{ user.password }}
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
