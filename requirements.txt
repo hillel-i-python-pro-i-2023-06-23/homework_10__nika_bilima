@@ -1,6 +1,7 @@
 # Core for web.
 django==4.2.3
 
+
 # [code_style]-[BEGIN]
 # Pre-commit hook.
 pre-commit==3.3.3
