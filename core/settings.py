@@ -41,9 +41,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-LOCAL_APPS = [
-    "apps.base",
-]
+LOCAL_APPS = ["apps.base", "apps.contacts"]
 
 THIRD_PARTY_APPS = []
 
