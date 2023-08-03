@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Contacts</title>
+</head>
+<body>
+    <h1>Generate Contacts</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="total">Number of contacts to generate:</label>
+        <input type="number" name="total" id="total" required>
+        <button type="submit">Generate</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <a href="{% url 'base:home' %}">Home</a>
+</body>
+</html>

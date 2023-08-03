@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Contacts</title>
+</head>
+<body>
+    <h1>Delete Contacts</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete All Contacts</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <a href="{% url 'base:home' %}">Home</a>
+</body>
+</html>
