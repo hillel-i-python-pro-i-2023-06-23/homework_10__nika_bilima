@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD</title>
+</head>
+<body>
+{% block content %}
+    <h1>Contact List with CRUD</h1>
+    <ul>
+        {% for contact in contacts %}
+        <li>
+            {{ contact.name }} - {{ contact.phone }}
+            <a href="{% url 'contacts:contact_detail' contact.pk %}">View</a>
+            <a href="{% url 'contacts:contact_update' contact.pk %}">Edit</a>
+            <a href="{% url 'contacts:contact_delete' contact.pk %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+    <a href="{% url 'base:home' %}">Home</a>
+</body>
+</html>
