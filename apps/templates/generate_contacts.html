@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Generate Contacts</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Generate Contacts{% endblock %}
+
+{% block content %}
     <h1>Generate Contacts</h1>
     <form method="post">
         {% csrf_token %}
@@ -14,6 +13,4 @@
     {% if message %}
         <p>{{ message }}</p>
     {% endif %}
-    <a href="{% url 'base:home' %}">Home</a>
-</body>
-</html>
+{% endblock %}

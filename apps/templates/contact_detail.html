@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Detail</title>
-</head>
-<body>
-    {% block content %}
+{% extends 'base.html' %}
+
+{% block title %}Contact Detail{% endblock %}
+
+{% block content %}
     <h1>Contact Detail</h1>
     <p>Name: {{ contact.name }}</p>
     <p>Phone: {{ contact.phone }}</p>
     <a href="{% url 'contacts:contact_update' contact.pk %}">Edit</a>
     <a href="{% url 'contacts:contact_delete' contact.pk %}">Delete</a>
-    {% endblock %}
-</body>
-</html>
+{% endblock %}

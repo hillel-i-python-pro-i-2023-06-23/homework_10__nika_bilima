@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
-    <h1>Welcome to the home page!</h1>
-    <p>Homework 11:</p>
-    <a href="{% url 'base:generate_users' %}">Generate users (10)</a><br>
-    <p>Homework 12:</p>
-    <a href="{% url 'contacts:contact_list' %}">All Contacts</a><br>
-    <a href="{% url 'contacts:generate_contacts' %}">Generate Contacts</a><br>
-    <a href="{% url 'contacts:delete_contacts' %}">Delete Contacts</a><br>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
     <p>Homework 13:</p>
     <p><a href="{% url 'contacts:contact_list' %}">View Contact List</a></p>
-    <a href="{% url 'contacts:contact_create' %}">Create Contact</a>
+    <p><a href="{% url 'contacts:contact_create' %}">Create Contact</a></p>
+    <p><a href="{% url 'contacts:generate_contacts' %}">Generate Contacts</a></p>
+    <p><a href="{% url 'contacts:delete_contacts' %}">Delete Contacts</a></p>
     <p><a href="{% url 'contacts:contact_list_crud' %}">View Contact List (CRUD)</a></p>
-</body>
-</html>
+{% endblock %}

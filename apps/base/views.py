@@ -17,10 +17,8 @@ class UserGeneratorView(View):
         return "".join(random.choice(characters) for _ in range(length))
 
     def get(self, request):
-        num_users = int(
-            request.GET.get("num_users", 10)
-        )  # Получаем количество пользователей (если не указано, будет 10)
-        generated_users = set()  # Хранение уникальных пользователей
+        num_users = int(request.GET.get("num_users", 10))
+        generated_users = set()
         users_data = []
 
         while len(users_data) < num_users:

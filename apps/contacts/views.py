@@ -34,7 +34,7 @@ def contact_create(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("contacts:contact_list")  # Повернення до списку контактів
+            return redirect("contacts:contact_list_crud")
     else:
         form = ContactForm()
     return render(request, "contact_form.html", {"form": form})
@@ -51,7 +51,7 @@ def contact_update(request, pk):
         form = ContactForm(request.POST, instance=contact)
         if form.is_valid():
             form.save()
-            return redirect("contacts:contact_list")
+            return redirect("contacts:contact_list_crud")
     else:
         form = ContactForm(instance=contact)
     return render(request, "contact_form.html", {"form": form, "pk": pk})
@@ -61,7 +61,7 @@ def contact_delete(request, pk):
     contact = Contact.objects.get(pk=pk)
     if request.method == "POST":
         contact.delete()
-        return redirect("contacts:contact_list")
+        return redirect("contacts:contact_list_crud")
     return render(request, "contact_confirm_delete.html", {"contact": contact})
 
 

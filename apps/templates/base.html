@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Title{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'base:home' %}">Home</a>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+       &copy; 2023 Nika Bilima Homework 13.
+    </footer>
+</body>
+</html>
