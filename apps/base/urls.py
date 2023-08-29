@@ -5,6 +5,6 @@ from .views import UserGeneratorView, HomePageView
 app_name = "base"
 
 urlpatterns = [
-    path("", HomePageView.as_view(), name="home"),  # Додайте новий URL для початкової сторінки
+    path("", HomePageView.as_view(), name="home"),
     path("generate/", UserGeneratorView.as_view(), name="generate_users"),
 ]
