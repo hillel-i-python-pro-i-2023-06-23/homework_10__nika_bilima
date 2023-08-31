@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <p>Homework 13:</p>
+    <p><a href="{% url 'contacts:contact_list' %}">View Contact List</a></p>
+    <p><a href="{% url 'contacts:contact_create' %}">Create Contact</a></p>
+    <p><a href="{% url 'contacts:generate_contacts' %}">Generate Contacts</a></p>
+    <p><a href="{% url 'contacts:delete_contacts' %}">Delete Contacts</a></p>
+    <p><a href="{% url 'contacts:contact_list_crud' %}">View Contact List (CRUD)</a></p>
+{% endblock %}

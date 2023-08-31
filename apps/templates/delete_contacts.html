@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Contacts{% endblock %}
+
+{% block content %}
+    <h1>Delete Contacts</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete All Contacts</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% endblock %}

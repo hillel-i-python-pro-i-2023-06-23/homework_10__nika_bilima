@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Generate Contacts{% endblock %}
+
+{% block content %}
+    <h1>Generate Contacts</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="total">Number of contacts to generate:</label>
+        <input type="number" name="total" id="total" required>
+        <button type="submit">Generate</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% endblock %}
