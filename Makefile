@@ -72,3 +72,7 @@ migrations:
 # Migrate
 migrate:
 	@python manage.py migrate
+
+.PHONY: createsuperuser
+createsuperuser:
+	@python manage.py create_superuser
