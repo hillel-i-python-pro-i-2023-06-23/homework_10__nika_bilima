@@ -45,6 +45,15 @@ init-dev:
 	pip install --requirement requirements/local.txt && \
 	pre-commit install
 
+.PHONY: d-run-i-local-dev
+# Just run
+d-run-i-local-dev:
+	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
+		docker-compose \
+			up --build postgres
+
+
+
 .PHONY: homework-i-run
 # Run homework.
 homework-i-run:
