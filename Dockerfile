@@ -27,8 +27,6 @@ COPY --chown=${USER} ./apps apps
 
 USER ${USER}
 
-VOLUME ${WORKDIR}/db
-
 EXPOSE 8000
 
 ENTRYPOINT ["/entrypoint.sh"]

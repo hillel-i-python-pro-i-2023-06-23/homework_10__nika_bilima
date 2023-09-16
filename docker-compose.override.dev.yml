@@ -8,3 +8,7 @@ services:
     volumes:
       - ./db:/wd/db:rw
     user: "${UID}"
+
+  postgres:
+    ports:
+      - "5432:5432"
