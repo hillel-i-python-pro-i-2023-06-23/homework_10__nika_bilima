@@ -3,7 +3,7 @@ django==4.2.5
 
 
 # For name generation.
-faker==19.6.1
+faker==19.6.2
 
 
 #For environment variables and configuration
